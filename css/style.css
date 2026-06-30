@@ -46,37 +46,6 @@ img {
   border-radius: 12px;
 }
 
-/* ---------- Header ---------- */
-.site-header {
-  text-align: center;
-  padding: 2.5rem 1.5rem 1.5rem;
-}
-
-.logo {
-  font-family: 'Pacifico', cursive;
-  color: var(--teal);
-  font-size: clamp(2rem, 5vw, 3.2rem);
-  font-weight: 400;
-  margin: 0 0 0.4rem;
-}
-
-.tagline {
-  color: var(--teal);
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin: 0;
-}
-
-/* ---------- Menu placeholder ---------- */
-.menu-placeholder {
-  background: #E0E0E0;
-  color: var(--navy);
-  text-align: center;
-  font-weight: 700;
-  padding: 1rem;
-  font-size: 1rem;
-}
-
 /* ---------- Buttons ---------- */
 .btn {
   display: inline-block;
@@ -87,17 +56,40 @@ img {
   font-size: 1.05rem;
   padding: 0.9rem 2.2rem;
   border-radius: 999px;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  outline: 2px dashed rgba(255,255,255,0.6);
+  outline-offset: -6px;
+  transition: box-shadow 0.15s ease, background 0.15s ease, color 0.15s ease, outline-color 0.15s ease;
 }
 
 .btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(237, 21, 102, 0.35);
+  box-shadow: 0 6px 16px rgba(237, 21, 102, 0.45);
+}
+
+.btn:active {
+  background: #fff;
+  color: var(--pink);
+  outline-color: rgba(237,21,102,0.5);
+  box-shadow: 0 2px 8px rgba(237, 21, 102, 0.25);
 }
 
 .btn-small {
   font-size: 0.9rem;
   padding: 0.55rem 1.4rem;
+}
+
+/* Hero button — override transform-based hover since it's absolutely positioned */
+.buy-btn-overlay {
+  position: absolute;
+  left: 50%;
+  top: 85%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  white-space: nowrap;
+}
+
+.buy-btn-overlay:hover {
+  transform: translate(-50%, -50%);
+  box-shadow: 0 6px 20px rgba(237, 21, 102, 0.5);
 }
 
 .placeholder-link {
@@ -125,15 +117,6 @@ img {
   height: auto;
   display: block;
   border-radius: 0;
-}
-
-.buy-btn-overlay {
-  position: absolute;
-  left: 50%;
-  top: 85%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  white-space: nowrap;
 }
 
 /* ---------- Characters / Book covers grid ---------- */
@@ -311,6 +294,61 @@ img {
   font-size: 0.85rem;
   color: var(--navy);
   opacity: 0.7;
+}
+
+/* ---------- Shop page ---------- */
+.shop-wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+.shop-heading {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.shop-section {
+  margin-bottom: 3rem;
+}
+
+.shop-section-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--teal);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-bottom: 2px solid var(--mint);
+  padding-bottom: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+/* ---------- About / Coming Soon page ---------- */
+.coming-soon-wrap {
+  text-align: center;
+  padding: 4rem 1.5rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.coming-soon-img {
+  max-width: 220px;
+  margin: 0 auto 1.5rem;
+  border-radius: 0;
+  background: var(--mint);
+  padding: 1rem;
+  border-radius: 50%;
+}
+
+.coming-soon-wrap h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.coming-soon-wrap p {
+  font-size: 1rem;
+  color: var(--navy);
+  margin-bottom: 2rem;
 }
 
 /* ---------- Responsive ---------- */

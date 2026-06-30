@@ -1,6 +1,18 @@
 (function () {
   "use strict";
 
+  // Kit V3 API credentials
+  var KIT_API_KEY = "u4al61I-Wdrdg_i5oFLGaw";
+  var KIT_FORM_ID = "ced453e4bc";
+
+  // Tag names — Kit will create them automatically if they don't exist yet
+  var TAGS = {
+    "step-result-family":        "match-disney-wish",
+    "step-result-adult":         "match-virgin-voyages",
+    "step-result-budget-family": "match-budget-family",
+    "step-result-budget-adult":  "match-budget-adult"
+  };
+
   var steps = Array.prototype.slice.call(document.querySelectorAll(".quiz-step"));
   var questionSteps = steps.filter(function (s) { return s.dataset.step === "question"; });
   var score = { family: 0, adult: 0, budget: 0 };
@@ -21,7 +33,6 @@
     score.family += parseInt(btn.dataset.family || 0);
     score.adult  += parseInt(btn.dataset.adult  || 0);
     score.budget += parseInt(btn.dataset.budget || 0);
-
     currentIndex += 1;
     if (currentIndex < questionSteps.length) {
       showStep(questionSteps[currentIndex]);
@@ -41,26 +52,40 @@
       : "step-result-adult";
   }
 
+  function subscribeToKit(name, email, tag) {
+    // Subscribe to the form — this adds them to the list and triggers any
+    // welcome automations you set up in Kit later
+    var formUrl = "https://api.convertkit.com/v3/forms/" + KIT_FORM_ID + "/subscribe";
+    fetch(formUrl, {
+      method: "POST",
+      headers: { "Content-Type": "application/json; charset=utf-8" },
+      body: JSON.stringify({
+        api_key: KIT_API_KEY,
+        first_name: name,
+        email: email,
+        tags: [tag]
+      })
+    })
+    .then(function (res) {
+      if (!res.ok) {
+        console.warn("Kit subscription failed:", res.status);
+      }
+    })
+    .catch(function (err) {
+      // Silent fail — don't block the user from seeing their result
+      console.warn("Kit error:", err);
+    });
+  }
+
   function revealResult(name, email) {
     var resultId = getResultId();
     var resultStep = document.getElementById(resultId);
+    var tag = TAGS[resultId];
 
-    var resultNames = {
-      "step-result-family":        "Disney Wish (family)",
-      "step-result-adult":         "Virgin Voyages (adults-only)",
-      "step-result-budget-family": "Value Cruise — family",
-      "step-result-budget-adult":  "Value Getaway — adults"
-    };
+    // Fire the Kit subscription silently in the background
+    subscribeToKit(name, email, tag);
 
-    var mailLink = resultStep.querySelector("a.result-cta");
-    var subject = encodeURIComponent("Adventure quiz match: " + resultNames[resultId]);
-    var body = encodeURIComponent(
-      "Name: " + name + "\n" +
-      "Email: " + email + "\n" +
-      "Match: " + resultNames[resultId]
-    );
-    mailLink.href = "mailto:shellotravels@gmail.com?subject=" + subject + "&body=" + body;
-
+    // Show the result immediately — don't wait for Kit to respond
     showStep(resultStep);
   }
 

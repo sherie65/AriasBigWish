@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop | The Adventures of Mermaid Aria</title>
+  <meta name="description" content="Shop Aria's Big Wish — buy a copy for your family, gift a bundle, or donate a copy to Ronald McDonald House.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/nav.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="index.html" class="logo-link" aria-label="Mermaid Aria — Home">
+      <img src="assets/img/logo.png" alt="Mermaid Aria logo" class="logo-img">
+    </a>
+    <button class="hamburger" aria-expanded="false" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="main-nav" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html" class="active">Shop</a></li>
+      <li><a href="https://square.link/u/vRmiWOAO">Donate</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="quiz.html" class="nav-cta">Find Your Adventure</a></li>
+    </ul>
+  </header>
+
+  <main class="shop-wrap">
+
+    <h1 class="script center shop-heading">Shop</h1>
+
+    <section class="shop-section">
+      <h2 class="shop-section-title">Books</h2>
+      <div class="grid-2x2">
+
+        <div class="grid-item">
+          <div class="product-media">
+            <img src="assets/img/book-cover-1.jpg" alt="Aria's Big Wish book cover">
+            <span class="quick-view">Quick View</span>
+          </div>
+          <h3>Aria's Big Wish</h3>
+          <div class="bundle-selector">
+            <label for="shop-bundle-select" class="bundle-label">Select an option:</label>
+            <select id="shop-bundle-select" class="bundle-select" onchange="updateShopBundle(this)">
+              <option value="single" data-price="$24.99" data-shipping="Shipping included · US only" data-link="https://square.link/u/Ic2J6Kv0">1 Book — $24.99</option>
+              <option value="auntie" data-price="$58" data-shipping="Shipping included · US only" data-link="https://square.link/u/5y5rJkXw">Favorite Auntie Bundle — 3 Books — $58</option>
+              <option value="classroom" data-price="$95" data-shipping="Shipping included · US only" data-link="https://square.link/u/I52GV8gS">Classroom Bundle — 5 Books — $95</option>
+            </select>
+            <p class="price" id="shop-bundle-price">$24.99</p>
+            <p class="shipping-note" id="shop-bundle-shipping">Shipping included · US only</p>
+          </div>
+          <p class="blurb">Enjoy your copy with your little ones</p>
+          <a href="https://square.link/u/Ic2J6Kv0" id="shop-bundle-buy-btn" class="btn btn-small">Buy Now</a>
+        </div>
+
+        <div class="grid-item">
+          <a href="https://square.link/u/vRmiWOAO" class="product-media">
+            <img src="assets/img/book-cover-2-donate.jpg" alt="Aria's Big Wish — Donate a Copy">
+            <span class="quick-view">Quick View</span>
+          </a>
+          <h3>Donate a Copy</h3>
+          <p class="price">$19.99</p>
+          <p class="shipping-note">Hand delivered · no shipping charge</p>
+          <p class="blurb">This copy will be donated to Ronald McDonald House Charity as they were a huge help during Aria's NICU stay.</p>
+          <a href="https://square.link/u/vRmiWOAO" class="btn btn-small">Donate a Copy</a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Sherene Rance &middot; The Adventures of Mermaid Aria</p>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script>
+    function updateShopBundle(select) {
+      var opt = select.options[select.selectedIndex];
+      document.getElementById('shop-bundle-price').textContent = opt.dataset.price;
+      document.getElementById('shop-bundle-shipping').textContent = opt.dataset.shipping;
+      document.getElementById('shop-bundle-buy-btn').href = opt.dataset.link;
+    }
+  </script>
+
+</body>
+</html>
