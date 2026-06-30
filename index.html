@@ -26,7 +26,7 @@
   <!-- ============ HERO ============ -->
   <section class="hero-wrap">
     <img src="assets/img/hero.jpg" alt="Mermaid Aria swimming in the ocean" class="hero-img">
-    <a href="#REPLACE-WITH-SQUARE-LINK" class="btn btn-primary placeholder-link buy-btn-overlay">
+    <a href="https://square.link/u/Ic2J6Kv0" class="btn btn-primary buy-btn-overlay">
       Order Now
     </a>
   </section>
@@ -48,34 +48,63 @@
     <h2 class="script center books-heading">Buy a Book or Donate a Book</h2>
     <div class="grid-2x2">
       <div class="grid-item">
-        <a href="#REPLACE-WITH-SQUARE-LINK" class="placeholder-link">
+        <div class="product-media">
           <img src="assets/img/book-cover-1.jpg" alt="Aria's Big Wish book cover">
-        </a>
+          <span class="quick-view">Quick View</span>
+        </div>
         <h3>Aria's Big Wish</h3>
+
+        <div class="bundle-selector">
+          <label for="bundle-select" class="bundle-label">Select an option:</label>
+          <select id="bundle-select" class="bundle-select" onchange="updateBundle(this)">
+            <option value="single" data-price="$24.99" data-shipping="Shipping included · US only" data-link="https://square.link/u/Ic2J6Kv0">1 Book — $24.99</option>
+            <option value="auntie" data-price="$58" data-shipping="Shipping included · US only" data-link="https://square.link/u/5y5rJkXw">Favorite Auntie Bundle — 3 Books — $58</option>
+            <option value="classroom" data-price="$95" data-shipping="Shipping included · US only" data-link="https://square.link/u/I52GV8gS">Classroom Bundle — 5 Books — $95</option>
+          </select>
+          <p class="price" id="bundle-price">$24.99</p>
+          <p class="shipping-note" id="bundle-shipping">Shipping included · US only</p>
+        </div>
+
         <p class="blurb">Enjoy your copy with your little ones</p>
-        <a href="#REPLACE-WITH-SQUARE-LINK" class="btn btn-small placeholder-link">Buy Now</a>
+        <a href="https://square.link/u/Ic2J6Kv0" id="bundle-buy-btn" class="btn btn-small">Buy Now</a>
       </div>
       <div class="grid-item">
-        <a href="#REPLACE-WITH-DONATE-LINK" class="placeholder-link">
+        <a href="https://square.link/u/vRmiWOAO" class="product-media">
           <img src="assets/img/book-cover-2-donate.jpg" alt="Aria's Big Wish — Donate a Copy">
+          <span class="quick-view">Quick View</span>
         </a>
         <h3>Donate a Copy</h3>
+        <p class="price">$19.99</p>
+        <p class="shipping-note">Hand delivered · no shipping charge</p>
         <p class="blurb">This copy will be donated to Ronald McDonald House Charity as they were a huge help during Aria's NICU stay.</p>
-        <a href="#REPLACE-WITH-DONATE-LINK" class="btn btn-small placeholder-link">Donate a Copy</a>
+        <a href="https://square.link/u/vRmiWOAO" class="btn btn-small">Donate a Copy</a>
       </div>
     </div>
   </section>
 
-  <!-- ============ CONTINUE THE ADVENTURE (teaser) ============ -->
-  <section class="adventure-teaser">
-    <p>P.S. — every great mermaid story deserves a real-life sequel.</p>
-    <a href="quiz.html" class="teaser-link">Continue the Adventure &rarr;</a>
+  <!-- ============ CONTINUE THE ADVENTURE ============ -->
+  <section class="adventure-section">
+    <h2 class="script center">Continue the Adventure</h2>
+    <p class="adventure-copy">The book is just the beginning. Take our 2-minute quiz and find the cruise trip that matches your family's vibe — with a free personalized luggage tag waiting for you at the end.</p>
+    <div class="adventure-tag">
+      <img src="assets/img/luggage-tag.png" alt="Free personalized mermaid luggage tag">
+    </div>
+    <a href="quiz.html" class="btn btn-primary">Find My Adventure Match &rarr;</a>
   </section>
 
   <!-- ============ FOOTER ============ -->
   <footer class="site-footer">
     <p>&copy; 2026 Sherene Rance &middot; The Adventures of Mermaid Aria</p>
   </footer>
+
+  <script>
+    function updateBundle(select) {
+      var opt = select.options[select.selectedIndex];
+      document.getElementById('bundle-price').textContent = opt.dataset.price;
+      document.getElementById('bundle-shipping').textContent = '+ ' + opt.dataset.shipping;
+      document.getElementById('bundle-buy-btn').href = opt.dataset.link;
+    }
+  </script>
 
 </body>
 </html>

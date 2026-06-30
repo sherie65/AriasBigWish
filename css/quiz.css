@@ -100,8 +100,19 @@
 }
 
 .quiz-freebie {
+  margin: 0 0 1.25rem;
+}
+
+.quiz-freebie p {
   font-size: 0.9rem;
   font-weight: 700;
   color: var(--pink);
-  margin: 0 0 1.25rem;
+  margin: 0.5rem 0 0;
+}
+
+.tag-img {
+  max-width: 140px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 8px;
 }
