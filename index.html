@@ -7,7 +7,8 @@
   <meta name="description" content="Aria's Big Wish — a picture book about a mermaid and a human girl who become unlikely friends. Written by Sherene Rance.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Pacifico&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Pacifico&display=swap"></noscript>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/nav.css">
 </head>
@@ -16,7 +17,7 @@
   <!-- ============ NAV ============ -->
   <header class="site-header">
     <a href="index.html" class="logo-link" aria-label="Mermaid Aria — Home">
-      <img src="assets/img/logo.png" alt="Mermaid Aria logo" class="logo-img">
+      <img src="assets/img/logo.webp" fetchpriority="high" alt="Mermaid Aria logo" class="logo-img">
     </a>
     <button class="hamburger" aria-expanded="false" aria-label="Open menu">
       <span></span><span></span><span></span>
@@ -32,7 +33,7 @@
 
   <!-- ============ HERO ============ -->
   <section class="hero-wrap">
-    <img src="assets/img/hero.jpg" alt="Mermaid Aria swimming in the ocean" class="hero-img">
+    <img src="assets/img/hero.webp" fetchpriority="high" alt="Mermaid Aria swimming in the ocean" class="hero-img">
     <a href="https://square.link/u/Ic2J6Kv0" class="btn btn-primary buy-btn-overlay">
       Order Now
     </a>
@@ -43,11 +44,11 @@
     <h2 class="script center">Meet the Characters</h2>
     <div class="grid-2x2">
       <div class="grid-item">
-        <img src="assets/img/character-aria.png" alt="Mermaid Aria" class="cutout">
+        <img loading="lazy" src="assets/img/character-aria.webp" alt="Mermaid Aria" class="cutout">
         <h3>Mermaid Aria</h3>
       </div>
       <div class="grid-item">
-        <img src="assets/img/character-rosemary.png" alt="Rosemary Peach" class="cutout">
+        <img loading="lazy" src="assets/img/character-rosemary.webp" alt="Rosemary Peach" class="cutout">
         <h3>Rosemary Peach</h3>
       </div>
     </div>
@@ -56,7 +57,7 @@
     <div class="grid-2x2">
       <div class="grid-item">
         <div class="product-media">
-          <img src="assets/img/book-cover-1.jpg" alt="Aria's Big Wish book cover">
+          <img loading="lazy" src="assets/img/book-cover-1.webp" alt="Aria's Big Wish book cover">
           <span class="quick-view">Quick View</span>
         </div>
         <h3>Aria's Big Wish</h3>
@@ -77,7 +78,7 @@
       </div>
       <div class="grid-item">
         <a href="https://square.link/u/vRmiWOAO" class="product-media">
-          <img src="assets/img/book-cover-2-donate.jpg" alt="Aria's Big Wish — Donate a Copy">
+          <img loading="lazy" src="assets/img/book-cover-2-donate.webp" alt="Aria's Big Wish — Donate a Copy">
           <span class="quick-view">Quick View</span>
         </a>
         <h3>Donate a Copy</h3>
@@ -94,7 +95,7 @@
     <h2 class="script center">Continue the Adventure</h2>
     <p class="adventure-copy">The book is just the beginning. Take our 2-minute quiz and find the cruise trip that matches your family's vibe — with a free personalized luggage tag waiting for you at the end.</p>
     <div class="adventure-tag">
-      <img src="assets/img/luggage-tag.png" alt="Free personalized mermaid luggage tag">
+      <img loading="lazy" src="assets/img/luggage-tag.webp" alt="Free personalized mermaid luggage tag">
     </div>
     <a href="quiz.html" class="btn btn-primary">Find My Adventure Match &rarr;</a>
   </section>

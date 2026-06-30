@@ -7,7 +7,8 @@
   <meta name="description" content="About Sherene Rance and the story behind Mermaid Aria.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Pacifico&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Pacifico&display=swap"></noscript>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/nav.css">
 </head>
@@ -15,7 +16,7 @@
 
   <header class="site-header">
     <a href="index.html" class="logo-link" aria-label="Mermaid Aria — Home">
-      <img src="assets/img/logo.png" alt="Mermaid Aria logo" class="logo-img">
+      <img src="assets/img/logo.webp" fetchpriority="high" alt="Mermaid Aria logo" class="logo-img">
     </a>
     <button class="hamburger" aria-expanded="false" aria-label="Open menu">
       <span></span><span></span><span></span>
@@ -30,7 +31,7 @@
   </header>
 
   <main class="coming-soon-wrap">
-    <img src="assets/img/character-aria.png" alt="Mermaid Aria" class="coming-soon-img">
+    <img loading="lazy" src="assets/img/character-aria.webp" alt="Mermaid Aria" class="coming-soon-img">
     <h1 class="script">Coming Soon</h1>
     <p>Aria's story — and the story behind her — is on its way.</p>
     <a href="index.html" class="btn btn-primary">Back to Home</a>
