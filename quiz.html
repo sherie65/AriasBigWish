@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Continue the Adventure | Find Your Cruise Match</title>
+  <meta name="description" content="Take the quiz to find your family's perfect cruise match — inspired by Mermaid Aria.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/quiz.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="index.html" class="logo-link">
+      <h1 class="logo">The Adventures of Mermaid Aria</h1>
+    </a>
+    <p class="tagline">Continue the Adventure</p>
+  </header>
+
+  <main class="quiz-wrap">
+
+    <!-- ============ INTRO ============ -->
+    <section class="quiz-step" id="step-intro" data-step="intro">
+      <h2 class="script center">Find Your Cruise Match</h2>
+      <p class="quiz-intro-copy">
+        Aria's story is just the beginning. Answer a few quick questions and
+        we'll match you with the cruise adventure that fits you best.
+      </p>
+      <button type="button" class="btn btn-primary" data-action="start">Start the Quiz</button>
+    </section>
+
+    <!-- ============ QUESTIONS ============ -->
+    <section class="quiz-step" id="step-q1" data-step="question" hidden>
+      <p class="quiz-progress">Question 1 of 5</p>
+      <h3 class="quiz-question">Who's coming on this adventure?</h3>
+      <div class="quiz-options">
+        <button type="button" class="quiz-option" data-value="adult">Just us grown-ups</button>
+        <button type="button" class="quiz-option" data-value="family">Me and my little ones</button>
+        <button type="button" class="quiz-option" data-value="family">The whole multi-gen crew</button>
+      </div>
+    </section>
+
+    <section class="quiz-step" id="step-q2" data-step="question" hidden>
+      <p class="quiz-progress">Question 2 of 5</p>
+      <h3 class="quiz-question">What's calling to you most?</h3>
+      <div class="quiz-options">
+        <button type="button" class="quiz-option" data-value="adult">Quiet beaches and spa days</button>
+        <button type="button" class="quiz-option" data-value="family">Kids' clubs and character meet-and-greets</button>
+        <button type="button" class="quiz-option" data-value="family">A mix of both</button>
+      </div>
+    </section>
+
+    <section class="quiz-step" id="step-q3" data-step="question" hidden>
+      <p class="quiz-progress">Question 3 of 5</p>
+      <h3 class="quiz-question">Pick the vibe you're after</h3>
+      <div class="quiz-options">
+        <button type="button" class="quiz-option" data-value="adult">Adults-only luxury</button>
+        <button type="button" class="quiz-option" data-value="family">Family-friendly fun</button>
+        <button type="button" class="quiz-option" data-value="family">Either works for us</button>
+      </div>
+    </section>
+
+    <section class="quiz-step" id="step-q4" data-step="question" hidden>
+      <p class="quiz-progress">Question 4 of 5</p>
+      <h3 class="quiz-question">How do your little ones feel about mermaids and adventure?</h3>
+      <div class="quiz-options">
+        <button type="button" class="quiz-option" data-value="adult">No little ones on this trip</button>
+        <button type="button" class="quiz-option" data-value="family">They'd absolutely love it</button>
+        <button type="button" class="quiz-option" data-value="family">We're a mixed group</button>
+      </div>
+    </section>
+
+    <section class="quiz-step" id="step-q5" data-step="question" hidden>
+      <p class="quiz-progress">Question 5 of 5</p>
+      <h3 class="quiz-question">Dream destination?</h3>
+      <div class="quiz-options">
+        <button type="button" class="quiz-option" data-value="family">The Bahamas / Caribbean</button>
+        <button type="button" class="quiz-option" data-value="adult">Wherever's quiet and warm</button>
+        <button type="button" class="quiz-option" data-value="family">Wherever the wind takes us</button>
+      </div>
+    </section>
+
+    <!-- ============ EMAIL CAPTURE ============ -->
+    <section class="quiz-step" id="step-email" data-step="email" hidden>
+      <h2 class="script center">Almost there!</h2>
+      <p class="quiz-intro-copy">Enter your email to see your personalized cruise match.</p>
+      <form id="quiz-email-form" class="quiz-email-form">
+        <input type="text" id="quiz-name" placeholder="First name" required>
+        <input type="email" id="quiz-email" placeholder="Email address" required>
+        <button type="submit" class="btn btn-primary">See My Match</button>
+      </form>
+      <p class="quiz-disclaimer">[Replace once a real email/list tool is connected — for now this opens an email to Sherene with your quiz answers.]</p>
+    </section>
+
+    <!-- ============ RESULT: FAMILY ============ -->
+    <section class="quiz-step quiz-result" id="step-result-family" data-step="result" hidden>
+      <h2 class="script center">Your Match: Disney Wish</h2>
+      <p class="quiz-result-copy">
+        Sounds like your crew is ready for Disney magic! The Disney Wish brings
+        character meet-and-greets, kids' clubs, and family adventure — exactly
+        the kind of "tail of two worlds" energy Aria would approve of.
+      </p>
+      <p class="quiz-freebie">As a thank-you, you'll get a free Aria luggage tag for your trip.</p>
+      <a href="mailto:shellotravels@gmail.com" class="btn btn-primary">Talk Cruise Details</a>
+    </section>
+
+    <!-- ============ RESULT: ADULTS ============ -->
+    <section class="quiz-step quiz-result" id="step-result-adult" data-step="result" hidden>
+      <h2 class="script center">Your Match: Virgin Voyages</h2>
+      <p class="quiz-result-copy">
+        Sounds like you're a mermaid at heart who wants to splash around
+        without the kids! Virgin Voyages is an adults-only escape built for
+        quiet beaches, good food, and zero character breakfasts.
+      </p>
+      <p class="quiz-freebie">As a thank-you, you'll get a free [adult mermaid luggage tag — name TBD] for your trip.</p>
+      <a href="mailto:shellotravels@gmail.com" class="btn btn-primary">Talk Cruise Details</a>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Sherene Rance &middot; The Adventures of Mermaid Aria</p>
+  </footer>
+
+  <script src="js/quiz.js"></script>
+</body>
+</html>

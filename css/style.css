@@ -1,0 +1,237 @@
+/* ============================================
+   Mermaid Aria — Landing Page Styles
+   Palette sampled directly from the current Wix site:
+   --teal:  #309AAC  (headlines, accents)
+   --pink:  #ED1566  (buttons, character names)
+   --navy:  #092F37  (body text)
+   --peach: #FFC9B9  (section backgrounds)
+   --mint:  #E7F1F0  (section backgrounds)
+
+   Font note: the Wix site's script headlines look like the
+   "More Sugar" font (same as your booth sign). More Sugar isn't
+   on Google Fonts, so this uses Pacifico as a free stand-in.
+   Send the font file if you have a licensed copy and I'll swap it in.
+   ============================================ */
+
+:root {
+  --teal: #309AAC;
+  --pink: #ED1566;
+  --navy: #092F37;
+  --peach: #FFC9B9;
+  --mint: #E7F1F0;
+  --max-width: 1100px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  color: var(--navy);
+  background: #ffffff;
+  line-height: 1.6;
+}
+
+.script {
+  font-family: 'Pacifico', cursive;
+  color: var(--teal);
+  font-weight: 400;
+}
+
+.center { text-align: center; }
+
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  text-align: center;
+  padding: 2.5rem 1.5rem 1.5rem;
+}
+
+.logo {
+  font-family: 'Pacifico', cursive;
+  color: var(--teal);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 400;
+  margin: 0 0 0.4rem;
+}
+
+.tagline {
+  color: var(--teal);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* ---------- Menu placeholder ---------- */
+.menu-placeholder {
+  background: #E0E0E0;
+  color: var(--navy);
+  text-align: center;
+  font-weight: 700;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  background: var(--pink);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding: 0.9rem 2.2rem;
+  border-radius: 999px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(237, 21, 102, 0.35);
+}
+
+.btn-small {
+  font-size: 0.9rem;
+  padding: 0.55rem 1.4rem;
+}
+
+.placeholder-link {
+  outline: 2px dashed #fff;
+  outline-offset: -6px;
+  position: relative;
+}
+
+.shipping-note {
+  font-size: 0.85rem;
+  color: var(--navy);
+  opacity: 0.7;
+  margin: 0.5rem 0 0;
+}
+
+/* ---------- Hero ---------- */
+.hero-wrap {
+  position: relative;
+  width: 100%;
+  margin: 0;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0;
+}
+
+.buy-btn-overlay {
+  position: absolute;
+  left: 50%;
+  top: 85%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  white-space: nowrap;
+}
+
+/* ---------- Characters / Book covers grid ---------- */
+.characters {
+  padding: 3rem 1.5rem 3.5rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.characters h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2.5rem;
+}
+
+.books-heading {
+  margin-top: 3.5rem;
+}
+
+.grid-2x2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem 2rem;
+}
+
+.grid-item {
+  text-align: center;
+}
+
+.grid-item img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  width: 100%;
+  margin: 0 auto 1rem;
+}
+
+.grid-item img.cutout {
+  object-fit: contain;
+  background: var(--mint);
+  padding: 0.5rem;
+}
+
+.grid-item h3 {
+  color: var(--pink);
+  font-size: 1.3rem;
+  margin: 0 0 0.5rem;
+}
+
+.placeholder-copy {
+  font-style: italic;
+  opacity: 0.65;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.blurb {
+  font-size: 0.9rem;
+  color: var(--navy);
+  margin: 0 0 0.75rem;
+}
+
+/* ---------- Adventure teaser (quiet, secondary) ---------- */
+.adventure-teaser {
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  background: var(--mint);
+}
+
+.adventure-teaser p {
+  margin: 0 0 0.5rem;
+  font-size: 0.95rem;
+  color: var(--navy);
+  opacity: 0.75;
+}
+
+.teaser-link {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  color: var(--teal);
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.teaser-link:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  font-size: 0.85rem;
+  color: var(--navy);
+  opacity: 0.7;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 650px) {
+  .grid-2x2 {
+    grid-template-columns: 1fr;
+  }
+}
