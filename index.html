@@ -3,613 +3,145 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shello Travels — Your Mermaid Guide to the Seven Seas</title>
+  <title>The Adventures of Mermaid Aria | Aria's Big Wish</title>
+  <meta name="description" content="Aria's Big Wish — a picture book about a mermaid and a human girl who become unlikely friends. Written by Sherene Rance.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Pacifico&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Pacifico&display=swap"></noscript>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/exit-intent.css">
 </head>
 <body>
 
-  <!-- NAV — logo is the only home button, no Home link in menu -->
-  <nav class="nav" id="nav">
-    <div class="nav-inner">
-      <a href="#home" class="nav-logo">🐚 Shello Travels</a>
-      <ul class="nav-links">
-        <li><a href="#cruises">Cruises</a></li>
-        <li><a href="#carnival">Carnivals</a></li>
-        <li><a href="#quiz">Find Your Cruise</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact" class="nav-cta">Book Now</a></li>
-      </ul>
-      <button class="nav-hamburger" id="hamburger" aria-label="Menu">&#9776;</button>
-    </div>
-    <ul class="nav-mobile" id="nav-mobile">
-      <li><a href="#cruises">Cruises</a></li>
-      <li><a href="#carnival">Carnivals</a></li>
-      <li><a href="#quiz">Find Your Cruise</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Book Now</a></li>
+  <!-- ============ NAV ============ -->
+  <header class="site-header">
+    <a href="index.html" class="logo-link" aria-label="Mermaid Aria — Home">
+      <img src="assets/img/logo.webp" fetchpriority="high" alt="Mermaid Aria logo" class="logo-img">
+    </a>
+    <button class="hamburger" aria-expanded="false" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="main-nav" role="list">
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="https://square.link/u/vRmiWOAO">Donate</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="quiz.html" class="nav-cta">Find Your Adventure</a></li>
     </ul>
-  </nav>
+  </header>
 
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="hero-bg">
-      <div class="hero-overlay"></div>
-      <div class="bubbles">
-        <span class="bubble"></span><span class="bubble"></span><span class="bubble"></span>
-        <span class="bubble"></span><span class="bubble"></span><span class="bubble"></span>
-        <span class="bubble"></span><span class="bubble"></span>
-      </div>
-    </div>
-    <div class="hero-content">
-      <p class="hero-eyebrow">✦ Your Mermaid Travel Guide ✦</p>
-      <h1 class="hero-title">The Ocean is<br><em>Calling Your Name</em></h1>
-      <p class="hero-sub">Cruise travel, curated with magic. Virgin Voyages, Disney, Alaska & carnivals around the world — all planned by your very own mermaid agent.</p>
-      <div class="hero-actions">
-        <a href="#quiz" class="btn btn-primary">Find My Perfect Cruise</a>
-        <a href="#cruises" class="btn btn-outline">Explore Voyages</a>
-      </div>
-    </div>
-    <div class="hero-scroll">
-      <span>Dive in</span>
-      <div class="scroll-line"></div>
-    </div>
-    <div class="wave-divider hero-wave">
-      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40 L1440,80 L0,80 Z" fill="#faf7f2"/>
-      </svg>
-    </div>
+  <!-- ============ HERO ============ -->
+  <section class="hero-wrap">
+    <img src="assets/img/hero.webp" fetchpriority="high" alt="Mermaid Aria swimming in the ocean" class="hero-img">
+    <a href="https://square.link/u/Ic2J6Kv0" class="btn btn-primary buy-btn-overlay">
+      Order Now
+    </a>
   </section>
 
-  <!-- QUIZ TEASER -->
-  <section class="quiz-teaser">
-    <div class="container">
-      <div class="quiz-teaser-inner">
-        <div class="quiz-teaser-text">
-          <span class="quiz-teaser-emoji">🐚</span>
-          <div>
-            <h3>Not sure where to start?</h3>
-            <p>Take our 60-second cruise quiz and find your perfect voyage — we'll match you to the right cruise line and budget instantly.</p>
-          </div>
+  <!-- ============ MEET THE CHARACTERS ============ -->
+  <section class="characters">
+    <h2 class="script center">Meet the Characters</h2>
+    <div class="grid-2x2">
+      <div class="grid-item">
+        <img loading="lazy" src="assets/img/character-aria.webp" alt="Mermaid Aria" class="cutout">
+        <h3>Mermaid Aria</h3>
+      </div>
+      <div class="grid-item">
+        <img loading="lazy" src="assets/img/character-rosemary.webp" alt="Rosemary Peach" class="cutout">
+        <h3>Rosemary Peach</h3>
+      </div>
+    </div>
+
+    <h2 class="script center books-heading">Buy a Book or Donate a Book</h2>
+    <div class="grid-2x2">
+      <div class="grid-item">
+        <div class="product-media">
+          <img loading="lazy" src="assets/img/book-cover-1.webp" alt="Aria's Big Wish book cover">
+          <span class="quick-view">Quick View</span>
         </div>
-        <a href="#quiz" class="btn btn-primary quiz-teaser-btn">Take the Quiz ✦</a>
-      </div>
-    </div>
-  </section>
+        <h3>Aria's Big Wish</h3>
 
-  <!-- INTRO -->
-  <section class="intro">
-    <div class="container">
-      <p class="section-eyebrow">Welcome Aboard</p>
-      <h2 class="section-title">Not your average<br><em>travel agent</em></h2>
-      <p class="intro-text">[Intro paragraph placeholder — tell your story here. Who you are, why you love cruise travel, and what makes Shello Travels different. Make it warm, fun, and unmistakably you.]</p>
-      <div class="intro-stats">
-        <div class="stat"><span class="stat-num">✦</span><span class="stat-label">Cruise Specialist</span></div>
-        <div class="stat-divider"></div>
-        <div class="stat"><span class="stat-num">✦</span><span class="stat-label">Mermaid Approved</span></div>
-        <div class="stat-divider"></div>
-        <div class="stat"><span class="stat-num">✦</span><span class="stat-label">Zero Airport Stress</span></div>
+        <div class="bundle-selector">
+          <label for="bundle-select" class="bundle-label">Select an option:</label>
+          <select id="bundle-select" class="bundle-select" onchange="updateBundle(this)">
+            <option value="single" data-price="$24.99" data-shipping="Shipping included · US only" data-link="https://square.link/u/Ic2J6Kv0">1 Book — $24.99</option>
+            <option value="auntie" data-price="$58" data-shipping="Shipping included · US only" data-link="https://square.link/u/5y5rJkXw">Favorite Auntie Bundle — 3 Books — $58</option>
+            <option value="classroom" data-price="$95" data-shipping="Shipping included · US only" data-link="https://square.link/u/I52GV8gS">Classroom Bundle — 5 Books — $95</option>
+          </select>
+          <p class="price" id="bundle-price">$24.99</p>
+          <p class="shipping-note" id="bundle-shipping">Shipping included · US only</p>
+        </div>
+
+        <p class="blurb">Enjoy your copy with your little ones</p>
+        <a href="https://square.link/u/Ic2J6Kv0" id="bundle-buy-btn" class="btn btn-small">Buy Now</a>
+      </div>
+      <div class="grid-item">
+        <a href="https://square.link/u/vRmiWOAO" class="product-media">
+          <img loading="lazy" src="assets/img/book-cover-2-donate.webp" alt="Aria's Big Wish — Donate a Copy">
+          <span class="quick-view">Quick View</span>
+        </a>
+        <h3>Donate a Copy</h3>
+        <p class="price">$19.99</p>
+        <p class="shipping-note">Hand delivered · no shipping charge</p>
+        <p class="blurb">This copy will be donated to Ronald McDonald House Charity as they were a huge help during Aria's NICU stay.</p>
+        <a href="https://square.link/u/vRmiWOAO" class="btn btn-small">Donate a Copy</a>
       </div>
     </div>
   </section>
 
-  <!-- WAVE -->
-  <div class="wave-section">
-    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,30 C360,60 720,0 1080,30 C1260,45 1380,20 1440,30 L1440,60 L0,60 Z" fill="#0a3d4e"/>
-    </svg>
-  </div>
+  <!-- ============ CONTINUE THE ADVENTURE ============ -->
+  <section class="adventure-section">
+    <h2 class="script center">Continue the Adventure</h2>
+    <p class="adventure-copy">The book is just the beginning. Take our 2-minute quiz and find the cruise trip that matches your family's vibe — with a free personalized luggage tag waiting for you at the end.</p>
+    <div class="adventure-tag">
+      <img loading="lazy" src="assets/img/luggage-tag.webp" alt="Free personalized mermaid luggage tag">
+    </div>
+    <a href="quiz.html" class="btn btn-primary">Find My Adventure Match &rarr;</a>
+  </section>
 
-  <!-- CRUISE LINES -->
-  <section class="cruises" id="cruises">
-    <div class="container">
-      <p class="section-eyebrow light">Set Sail With</p>
-      <h2 class="section-title light">Curated Voyages<br><em>for Every Soul</em></h2>
-      <div class="cruise-grid">
-
-        <div class="cruise-card" data-line="virgin">
-          <div class="cruise-card-img placeholder-img">
-            <div class="placeholder-label">Virgin Voyages Ship Photo</div>
-            <div class="cruise-card-badge">Adults Only</div>
-          </div>
-          <div class="cruise-card-body">
-            <div class="cruise-line-tag virgin-tag">Virgin Voyages</div>
-            <h3>The Adults-Only Revolution</h3>
-            <p>No kids. No buffets. No formal nights. Just you, an open bar, and 20+ restaurants included in every fare. The coolest cruise experience on the water.</p>
-            <ul class="cruise-perks">
-              <li>🍹 All drinks included</li>
-              <li>🍽️ All dining included</li>
-              <li>💃 Adults 18+ only</li>
-              <li>🚢 Sails from NYC</li>
-            </ul>
-            <a href="#" class="btn btn-cruise">Book with Virgin →</a>
-          </div>
-        </div>
-
-        <div class="cruise-card" data-line="disney">
-          <div class="cruise-card-img placeholder-img">
-            <div class="placeholder-label">Disney Cruise Ship Photo</div>
-            <div class="cruise-card-badge">Magic at Sea</div>
-          </div>
-          <div class="cruise-card-body">
-            <div class="cruise-line-tag disney-tag">Disney Cruise Line</div>
-            <h3>Where Magic Meets the Ocean</h3>
-            <p>Broadway-quality shows, beloved characters, and an experience that genuinely delights every age. Disney Cruise Line isn't just for kids — it's for everyone who still believes in magic.</p>
-            <ul class="cruise-perks">
-              <li>🏰 Character meet &amp; greets</li>
-              <li>🎭 Broadway-style shows</li>
-              <li>🏝️ Private island stops</li>
-              <li>✨ All ages welcome</li>
-            </ul>
-            <a href="#contact" class="btn btn-cruise">Inquire Now →</a>
-          </div>
-        </div>
-
-        <div class="cruise-card" data-line="alaska">
-          <div class="cruise-card-img placeholder-img">
-            <div class="placeholder-label">Alaska Glacier Cruise Photo</div>
-            <div class="cruise-card-badge">Bucket List</div>
-          </div>
-          <div class="cruise-card-body">
-            <div class="cruise-line-tag alaska-tag">Alaska Cruises</div>
-            <h3>Glaciers, Whales &amp; Wild Beauty</h3>
-            <p>Bald eagles overhead. Glaciers the size of buildings. Whales breaching at sunrise. Alaska is unlike anything else on earth — and a cruise is the most breathtaking way to see it.</p>
-            <ul class="cruise-perks">
-              <li>🐋 Whale watching</li>
-              <li>🧊 Glacier Bay access</li>
-              <li>🦅 Wildlife everywhere</li>
-              <li>🌄 Midnight sun sailings</li>
-            </ul>
-            <a href="#contact" class="btn btn-cruise">Inquire Now →</a>
-          </div>
-        </div>
-
+  <!-- ============ REVIEWS TEASER ============ -->
+  <section class="reviews-teaser">
+    <h2 class="script center">What Readers Are Saying</h2>
+    <div class="reviews-teaser-grid">
+      <div class="teaser-card">
+        <div class="review-stars" aria-label="5 stars">★★★★★</div>
+        <blockquote class="review-quote">"[Replace with review quote #1]"</blockquote>
+        <p class="review-name">— [Name], age [X]</p>
       </div>
+      <div class="teaser-card">
+        <div class="review-stars" aria-label="5 stars">★★★★★</div>
+        <blockquote class="review-quote">"[Replace with review quote #2]"</blockquote>
+        <p class="review-name">— [Name], age [X]</p>
+      </div>
+      <div class="teaser-card">
+        <div class="review-stars" aria-label="5 stars">★★★★★</div>
+        <blockquote class="review-quote">"[Replace with review quote #3]"</blockquote>
+        <p class="review-name">— [Name], age [X]</p>
+      </div>
+    </div>
+    <div class="center" style="margin-top:2rem;">
+      <a href="reviews.html" class="btn btn-primary">Read All Reviews</a>
     </div>
   </section>
 
-  <!-- WAVE -->
-  <div class="wave-section wave-flip">
-    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,30 C360,0 720,60 1080,30 C1260,15 1380,40 1440,30 L1440,0 L0,0 Z" fill="#0a3d4e"/>
-    </svg>
-  </div>
-
-  <!-- CARNIVAL LISTINGS -->
-  <section class="carnival" id="carnival">
-    <div class="container">
-      <p class="section-eyebrow">World Carnivals</p>
-      <h2 class="section-title">Celebrate the World<br><em>in Style</em></h2>
-      <p class="section-sub">Pre-booked accommodations for the world's most iconic carnival celebrations. Reserve your spot — spaces are extremely limited.</p>
-      <div class="carnival-grid">
-
-        <div class="carnival-card">
-          <div class="carnival-img placeholder-img">
-            <div class="placeholder-label">Carnival Event Photo</div>
-            <div class="carnival-status available">Available</div>
-          </div>
-          <div class="carnival-body">
-            <div class="carnival-event-tag">🎭 [Event Name]</div>
-            <h3>[City, Country]</h3>
-            <div class="carnival-meta">
-              <span>📅 [Dates]</span>
-              <span>🏨 [Hotel Name]</span>
-            </div>
-            <p>[Short description of the event and why this accommodation is special.]</p>
-            <div class="carnival-price">
-              <span class="price-label">Starting from</span>
-              <span class="price-amount">$[XXX] <small>/ person</small></span>
-            </div>
-            <a href="#" class="btn btn-primary carnival-btn" data-event="carnival1">Reserve My Spot</a>
-          </div>
-        </div>
-
-        <div class="carnival-card">
-          <div class="carnival-img placeholder-img">
-            <div class="placeholder-label">Carnival Event Photo</div>
-            <div class="carnival-status available">Available</div>
-          </div>
-          <div class="carnival-body">
-            <div class="carnival-event-tag">🎉 [Event Name]</div>
-            <h3>[City, Country]</h3>
-            <div class="carnival-meta">
-              <span>📅 [Dates]</span>
-              <span>🏨 [Hotel Name]</span>
-            </div>
-            <p>[Short description of the event and why this accommodation is special.]</p>
-            <div class="carnival-price">
-              <span class="price-label">Starting from</span>
-              <span class="price-amount">$[XXX] <small>/ person</small></span>
-            </div>
-            <a href="#" class="btn btn-primary carnival-btn" data-event="carnival2">Reserve My Spot</a>
-          </div>
-        </div>
-
-        <div class="carnival-card">
-          <div class="carnival-img placeholder-img">
-            <div class="placeholder-label">Carnival Event Photo</div>
-            <div class="carnival-status limited">Limited Spots</div>
-          </div>
-          <div class="carnival-body">
-            <div class="carnival-event-tag">🌺 [Event Name]</div>
-            <h3>[City, Country]</h3>
-            <div class="carnival-meta">
-              <span>📅 [Dates]</span>
-              <span>🏨 [Hotel Name]</span>
-            </div>
-            <p>[Short description of the event and why this accommodation is special.]</p>
-            <div class="carnival-price">
-              <span class="price-label">Starting from</span>
-              <span class="price-amount">$[XXX] <small>/ person</small></span>
-            </div>
-            <a href="#" class="btn btn-primary carnival-btn" data-event="carnival3">Reserve My Spot</a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- BOOKING MODAL -->
-  <div class="modal-overlay" id="booking-modal">
-    <div class="modal">
-      <button class="modal-close" id="modal-close">✕</button>
-      <div class="modal-header">
-        <h3>Reserve Your Spot 🐚</h3>
-        <p>Complete the form below and I'll be in touch within 24 hours to confirm your reservation.</p>
-      </div>
-      <div class="modal-body">
-        <iframe id="booking-iframe"
-          src="https://docs.google.com/forms/d/e/[YOUR-GOOGLE-FORM-ID]/viewform?embedded=true"
-          width="100%" height="520" frameborder="0" marginheight="0" marginwidth="0">
-          Loading form…
-        </iframe>
-        <p class="form-placeholder-note">[Replace the iframe src with your actual Google Form embed link]</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- WAVE -->
-  <div class="wave-section">
-    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,20 C480,60 960,0 1440,40 L1440,60 L0,60 Z" fill="#0a3d4e"/>
-    </svg>
-  </div>
-
-  <!-- QUIZ -->
-  <section class="quiz-section" id="quiz">
-    <div class="container">
-      <p class="section-eyebrow light">✦ Interactive ✦</p>
-      <h2 class="section-title light">Which Cruise is<br><em>Calling Your Soul?</em></h2>
-      <p class="section-sub light">5 questions. Instant results. Your perfect voyage is waiting.</p>
-      <div class="quiz-container" id="quiz-container">
-        <div class="quiz-progress">
-          <div class="quiz-progress-bar" id="quiz-progress-bar"></div>
-        </div>
-        <p class="quiz-progress-label" id="quiz-progress-label">Question 1 of 5</p>
-
-        <div class="quiz-step active" data-step="1">
-          <h3 class="quiz-question">What's your ideal vacation vibe?</h3>
-          <div class="quiz-options">
-            <button class="quiz-option" data-value="party">🥂 Cocktails, dancing &amp; no agenda</button>
-            <button class="quiz-option" data-value="magic">✨ Pure magic &amp; wonder for the whole family</button>
-            <button class="quiz-option" data-value="wild">🌿 Raw nature &amp; once-in-a-lifetime wildlife</button>
-            <button class="quiz-option" data-value="culture">🎭 Culture, festivals &amp; celebrating with the world</button>
-          </div>
-        </div>
-        <div class="quiz-step" data-step="2">
-          <h3 class="quiz-question">Who are you bringing?</h3>
-          <div class="quiz-options">
-            <button class="quiz-option" data-value="solo">Just me 👑</button>
-            <button class="quiz-option" data-value="couple">My partner 💑</button>
-            <button class="quiz-option" data-value="friends">My girls / crew 🥳</button>
-            <button class="quiz-option" data-value="family">The whole family 👨‍👩‍👧‍👦</button>
-          </div>
-        </div>
-        <div class="quiz-step" data-step="3">
-          <h3 class="quiz-question">How do you feel about kids on your vacation?</h3>
-          <div class="quiz-options">
-            <button class="quiz-option" data-value="nokids">Hard no — adults only please 🙅‍♀️</button>
-            <button class="quiz-option" data-value="kidsfine">They're fine, I don't mind either way</button>
-            <button class="quiz-option" data-value="kidslove">I love kids — I'm bringing mine! 👶</button>
-            <button class="quiz-option" data-value="kidsgreat">The more the merrier — family atmosphere!</button>
-          </div>
-        </div>
-        <div class="quiz-step" data-step="4">
-          <h3 class="quiz-question">Pick your dream view from the deck:</h3>
-          <div class="quiz-options">
-            <button class="quiz-option" data-value="tropical">Turquoise Caribbean water 🌊</button>
-            <button class="quiz-option" data-value="glacier">A massive glacier slowly calving 🧊</button>
-            <button class="quiz-option" data-value="castle">European coastlines &amp; castles 🏰</button>
-            <button class="quiz-option" data-value="festival">A city lit up for a massive street festival 🎆</button>
-          </div>
-        </div>
-        <div class="quiz-step" data-step="5">
-          <h3 class="quiz-question">What's your budget per person?</h3>
-          <div class="quiz-options">
-            <button class="quiz-option" data-value="budget1">Under $1,000 — keep it affordable</button>
-            <button class="quiz-option" data-value="budget2">$1,000–$2,500 — mid-range comfort</button>
-            <button class="quiz-option" data-value="budget3">$2,500–$5,000 — treat yourself</button>
-            <button class="quiz-option" data-value="budget4">$5,000+ — full luxury, no limits</button>
-          </div>
-        </div>
-        <div class="quiz-step" data-step="6">
-          <h3 class="quiz-question">Your perfect cruise match is ready! 🐚</h3>
-          <p class="quiz-sub">Enter your details to unlock your result and get personalized cruise recommendations straight to your inbox.</p>
-          <div class="quiz-form">
-            <div class="quiz-form-group">
-              <input type="text" id="quiz-name" placeholder="Your first name" class="quiz-input">
-            </div>
-            <div class="quiz-form-group">
-              <input type="email" id="quiz-email" placeholder="Your email address" class="quiz-input">
-            </div>
-            <div class="quiz-form-group quiz-consent">
-              <label class="consent-label">
-                <input type="checkbox" id="quiz-consent">
-                <span>I agree to receive travel tips and cruise offers from Shello Travels. Unsubscribe anytime. <a href="/privacy.html" target="_blank">Privacy Policy</a></span>
-              </label>
-            </div>
-            <button class="btn btn-primary btn-full" id="quiz-submit">Show My Cruise Match ✦</button>
-          </div>
-        </div>
-        <div class="quiz-step quiz-result" data-step="7">
-          <div class="result-icon" id="result-icon">🐚</div>
-          <h3 class="result-title" id="result-title">Your Perfect Cruise Is...</h3>
-          <div class="result-cruise" id="result-cruise">Virgin Voyages</div>
-          <p class="result-desc" id="result-desc"></p>
-          <div class="result-budget" id="result-budget"></div>
-          <div class="result-actions">
-            <a href="#contact" class="btn btn-primary">Book This Cruise 🚢</a>
-            <button class="btn btn-outline-light" id="quiz-retake">Retake Quiz</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WAVE -->
-  <div class="wave-section wave-flip" style="background:#0a3d4e">
-    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,40 C360,0 720,60 1080,20 C1260,5 1380,50 1440,30 L1440,0 L0,0 Z" fill="#faf7f2"/>
-    </svg>
-  </div>
-
-  <!-- ABOUT -->
-  <section class="about" id="about">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-img-wrap">
-          <div class="about-img placeholder-img tall">
-            <div class="placeholder-label">Your Photo Here</div>
-          </div>
-          <div class="about-img-accent"></div>
-        </div>
-        <div class="about-content">
-          <p class="section-eyebrow">Meet Your Agent</p>
-          <h2 class="section-title">Hi, I'm<br><em>[Your Name]</em></h2>
-          <p>[Paragraph 1 — your story, how you got into travel, why cruises specifically. Make it personal and warm.]</p>
-          <p>[Paragraph 2 — your specialties, what makes you different, what your clients say about working with you.]</p>
-          <div class="about-badges">
-            <span class="about-badge">🐚 Cruise Specialist</span>
-            <span class="about-badge">✈️ Inteletravel Agent</span>
-            <span class="about-badge">🌊 Virgin Voyages Expert</span>
-            <span class="about-badge">🏰 Disney Cruise Advisor</span>
-          </div>
-          <a href="#contact" class="btn btn-primary">Let's Plan Your Trip</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS — 3 side by side, card style -->
-  <section class="testimonials">
-    <div class="container">
-      <p class="section-eyebrow">Happy Travelers</p>
-      <h2 class="section-title">What They're<br><em>Saying</em></h2>
-      <div class="testimonial-grid">
-
-        <div class="testimonial-card">
-          <div class="testimonial-top">
-            <div class="testimonial-stars">★★★★★</div>
-            <div class="testimonial-cruise-type">Virgin Voyages</div>
-          </div>
-          <p class="testimonial-quote">"[Placeholder testimonial — ask a past client for a quote about their experience booking with you.]"</p>
-          <div class="testimonial-footer">
-            <div class="testimonial-avatar">[C]</div>
-            <div>
-              <div class="testimonial-author">[Client Name]</div>
-              <div class="testimonial-trip">[Trip type, Month Year]</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-card testimonial-featured">
-          <div class="testimonial-top">
-            <div class="testimonial-stars">★★★★★</div>
-            <div class="testimonial-cruise-type">Disney Cruise Line</div>
-          </div>
-          <p class="testimonial-quote">"[Placeholder testimonial — what did booking with a mermaid travel agent feel like? What made it special?]"</p>
-          <div class="testimonial-footer">
-            <div class="testimonial-avatar">[M]</div>
-            <div>
-              <div class="testimonial-author">[Client Name]</div>
-              <div class="testimonial-trip">[Trip type, Month Year]</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-card">
-          <div class="testimonial-top">
-            <div class="testimonial-stars">★★★★★</div>
-            <div class="testimonial-cruise-type">Alaska Cruise</div>
-          </div>
-          <p class="testimonial-quote">"[Placeholder testimonial — results, savings, or a moment from the trip they'll never forget.]"</p>
-          <div class="testimonial-footer">
-            <div class="testimonial-avatar">[J]</div>
-            <div>
-              <div class="testimonial-author">[Client Name]</div>
-              <div class="testimonial-trip">[Trip type, Month Year]</div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- EMAIL CAPTURE — standalone, separate from quiz and contact -->
-  <section class="email-capture">
-    <div class="container">
-      <div class="email-capture-inner">
-        <div class="email-capture-text">
-          <span class="email-capture-icon">🌊</span>
-          <div>
-            <h3>Stay in the current</h3>
-            <p>Cruise deals, travel tips, and insider secrets — delivered to your inbox. No spam, just the good stuff.</p>
-          </div>
-        </div>
-        <form class="email-capture-form" id="email-capture-form" action="https://formspree.io/f/[YOUR-FORMSPREE-ID]" method="POST">
-          <div class="email-capture-fields">
-            <input type="text" name="first_name" placeholder="First name" class="email-capture-input" required>
-            <input type="email" name="email" placeholder="Your email address" class="email-capture-input" required>
-            <button type="submit" class="btn btn-primary">Subscribe ✦</button>
-          </div>
-          <label class="email-capture-consent consent-label">
-            <input type="checkbox" name="consent" required>
-            <span>I agree to receive travel tips and offers from Shello Travels. <a href="/privacy.html">Privacy Policy</a></span>
-          </label>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
-    <div class="wave-section" style="margin-bottom:0">
-      <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,30 C360,60 720,0 1080,40 C1260,55 1380,15 1440,30 L1440,60 L0,60 Z" fill="#0a3d4e"/>
-      </svg>
-    </div>
-    <div class="contact-inner">
-      <div class="container">
-        <p class="section-eyebrow light">Ready to Sail?</p>
-        <h2 class="section-title light">Let's Plan Your<br><em>Dream Voyage</em></h2>
-        <p class="section-sub light">Fill out the form below and your mermaid travel agent will be in touch within 24 hours.</p>
-        <div class="contact-grid">
-          <div class="contact-form-wrap">
-            <form class="contact-form" id="contact-form" action="https://formspree.io/f/[YOUR-FORMSPREE-ID]" method="POST">
-              <div class="form-row">
-                <div class="form-group">
-                  <label>First Name</label>
-                  <input type="text" name="first_name" placeholder="Your first name" required>
-                </div>
-                <div class="form-group">
-                  <label>Last Name</label>
-                  <input type="text" name="last_name" placeholder="Your last name" required>
-                </div>
-              </div>
-              <div class="form-group">
-                <label>Email</label>
-                <input type="email" name="email" placeholder="your@email.com" required>
-              </div>
-              <div class="form-group">
-                <label>Phone (optional)</label>
-                <input type="tel" name="phone" placeholder="Your phone number">
-              </div>
-              <div class="form-group">
-                <label>I'm interested in...</label>
-                <select name="cruise_type">
-                  <option value="">Select a cruise type</option>
-                  <option value="virgin">Virgin Voyages</option>
-                  <option value="disney">Disney Cruise Line</option>
-                  <option value="alaska">Alaska Cruise</option>
-                  <option value="carnival_event">World Carnival Package</option>
-                  <option value="not_sure">Not sure yet — help me decide!</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label>Tell me about your dream trip</label>
-                <textarea name="message" rows="4" placeholder="Dates, group size, budget, any details you have..."></textarea>
-              </div>
-              <div class="form-group consent-group">
-                <label class="consent-label">
-                  <input type="checkbox" name="consent" required>
-                  <span>I agree to receive travel tips and cruise offers from Shello Travels. Unsubscribe anytime. <a href="/privacy.html">Privacy Policy</a></span>
-                </label>
-              </div>
-              <button type="submit" class="btn btn-primary btn-full">Send My Inquiry 🐚</button>
-            </form>
-          </div>
-          <div class="contact-info">
-            <div class="contact-info-card">
-              <h4>Other ways to reach me</h4>
-              <div class="contact-item">
-                <span class="contact-icon">📧</span>
-                <span>[your@email.com]</span>
-              </div>
-              <div class="contact-item">
-                <span class="contact-icon">📱</span>
-                <span>[Your phone or WhatsApp]</span>
-              </div>
-              <div class="contact-item">
-                <span class="contact-icon">📸</span>
-                <span>[@shellotravels on Instagram]</span>
-              </div>
-              <div class="contact-item">
-                <span class="contact-icon">👤</span>
-                <span>[Facebook page link]</span>
-              </div>
-              <div class="response-note">
-                <span>⏱️</span>
-                <span>I respond to all inquiries within 24 hours</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-inner">
-        <div class="footer-brand">
-          <div class="footer-logo">🐚 Shello Travels</div>
-          <p>Your mermaid guide to the seven seas. Cruise travel, curated with magic.</p>
-          <div class="footer-social">
-            <a href="#" aria-label="Instagram">📸</a>
-            <a href="#" aria-label="Facebook">👤</a>
-            <a href="#" aria-label="TikTok">🎵</a>
-          </div>
-        </div>
-        <div class="footer-links">
-          <h5>Explore</h5>
-          <ul>
-            <li><a href="#cruises">Virgin Voyages</a></li>
-            <li><a href="#cruises">Disney Cruise Line</a></li>
-            <li><a href="#cruises">Alaska Cruises</a></li>
-            <li><a href="#carnival">World Carnivals</a></li>
-          </ul>
-        </div>
-        <div class="footer-links">
-          <h5>Company</h5>
-          <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#quiz">Cruise Quiz</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="/privacy.html">Privacy Policy</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© 2026 Shello Travels. All rights reserved. | Hosted by Inteletravel</p>
-      </div>
-    </div>
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <p>&copy; 2026 Sherene Rance &middot; The Adventures of Mermaid Aria</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/exit-intent.js"></script>
+  <script>
+    function updateBundle(select) {
+      var opt = select.options[select.selectedIndex];
+      document.getElementById('bundle-price').textContent = opt.dataset.price;
+      document.getElementById('bundle-shipping').textContent = '+ ' + opt.dataset.shipping;
+      document.getElementById('bundle-buy-btn').href = opt.dataset.link;
+    }
+  </script>
+
 </body>
 </html>
