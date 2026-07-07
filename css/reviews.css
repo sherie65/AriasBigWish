@@ -55,8 +55,8 @@
 .review-img {
   width: 260px;
   height: 260px;
-  object-fit: cover;
-  border-radius: 50%;
+  object-fit: contain;
+  border-radius: 0;
   display: block;
   cursor: pointer;
   transform-origin: center center;
