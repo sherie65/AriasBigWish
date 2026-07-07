@@ -1,0 +1,152 @@
+/* ============================================
+   Reviews page — zigzag layout with shake animations
+   ============================================ */
+
+@keyframes shake {
+  0%   { transform: rotate(0deg); }
+  15%  { transform: rotate(-8deg); }
+  30%  { transform: rotate(8deg); }
+  45%  { transform: rotate(-6deg); }
+  60%  { transform: rotate(6deg); }
+  75%  { transform: rotate(-3deg); }
+  90%  { transform: rotate(3deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.reviews-wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+.reviews-heading {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.reviews-subhead {
+  color: var(--navy);
+  opacity: 0.65;
+  font-size: 0.95rem;
+  margin: 0 0 3rem;
+}
+
+/* Zigzag rows */
+.reviews-zigzag {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.review-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+/* Image wrapper */
+.review-img-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.review-img {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  cursor: pointer;
+  transform-origin: center center;
+  transition: transform 0.1s ease;
+}
+
+/* Desktop hover shake */
+@media (hover: hover) {
+  .review-img.shake-hover:hover {
+    animation: shake 0.6s ease forwards;
+  }
+}
+
+/* Mobile scroll shake — added via JS */
+.review-img.shake-scroll {
+  animation: shake 0.7s ease forwards;
+}
+
+/* Stars */
+.review-stars {
+  color: #F5B400;
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  margin-bottom: 0.75rem;
+}
+
+/* Quote */
+.review-quote {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--navy);
+  font-style: italic;
+  margin: 0 0 1rem;
+  padding: 0;
+  border: none;
+}
+
+/* Name */
+.review-name {
+  font-weight: 700;
+  color: var(--teal);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* Alternating background tints per row */
+.review-row:nth-child(odd) {
+  background: var(--mint);
+  border-radius: 20px;
+  padding: 2rem;
+}
+
+.review-row:nth-child(even) {
+  background: var(--peach);
+  border-radius: 20px;
+  padding: 2rem;
+}
+
+/* CTA at bottom */
+.review-cta-wrap {
+  margin-top: 4rem;
+  padding: 2.5rem 1.5rem;
+  background: var(--mint);
+  border-radius: 18px;
+}
+
+.review-cta-copy {
+  font-size: 1rem;
+  color: var(--navy);
+  margin: 0 0 1.25rem;
+}
+
+/* Mobile — stack to single column */
+@media (max-width: 650px) {
+  .review-row {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  /* On mobile, always put image first regardless of zigzag direction */
+  .review-row[data-dir="right"] .review-content {
+    order: 2;
+  }
+  .review-row[data-dir="right"] .review-img-wrap {
+    order: 1;
+  }
+
+  .review-img {
+    width: 180px;
+    height: 180px;
+  }
+}

@@ -287,6 +287,60 @@ img {
   border-color: var(--pink);
 }
 
+/* ---------- Reviews teaser (home page) ---------- */
+.reviews-teaser {
+  padding: 3.5rem 1.5rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.reviews-teaser h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+
+.reviews-teaser-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.teaser-card {
+  background: var(--mint);
+  border-radius: 16px;
+  padding: 1.5rem;
+}
+
+.review-stars {
+  color: #F5B400;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  margin-bottom: 0.6rem;
+}
+
+.review-quote {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--navy);
+  font-style: italic;
+  margin: 0 0 0.75rem;
+  padding: 0;
+  border: none;
+}
+
+.review-name {
+  font-weight: 700;
+  color: var(--teal);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+@media (max-width: 650px) {
+  .reviews-teaser-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ---------- Footer ---------- */
 .site-footer {
   text-align: center;

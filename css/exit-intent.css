@@ -1,0 +1,131 @@
+/* ============================================
+   Exit intent popup — shared across pages
+   ============================================ */
+
+#exit-popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(9, 47, 55, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 1.5rem;
+}
+
+#exit-popup-overlay.visible {
+  opacity: 1;
+}
+
+#exit-popup {
+  background: #fff;
+  border-radius: 20px;
+  padding: 2.5rem 2rem 2rem;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  transform: translateY(16px);
+  transition: transform 0.3s ease;
+}
+
+#exit-popup-overlay.visible #exit-popup {
+  transform: translateY(0);
+}
+
+#exit-popup-close {
+  position: absolute;
+  top: 0.85rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #999;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0.25rem 0.5rem;
+}
+
+#exit-popup-close:hover {
+  color: var(--navy);
+}
+
+#exit-popup-tag {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  margin: 0 auto 1.25rem;
+  display: block;
+  border-radius: 8px;
+  animation: gentle-shake 1s ease 0.4s forwards;
+}
+
+@keyframes gentle-shake {
+  0%   { transform: rotate(0deg); }
+  20%  { transform: rotate(-8deg); }
+  40%  { transform: rotate(8deg); }
+  60%  { transform: rotate(-5deg); }
+  80%  { transform: rotate(5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+#exit-popup h2 {
+  font-family: 'Pacifico', cursive;
+  color: var(--teal);
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 0 0 0.75rem;
+}
+
+#exit-popup p {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.95rem;
+  color: var(--navy);
+  line-height: 1.6;
+  margin: 0 0 1.5rem;
+}
+
+#exit-popup-cta {
+  display: inline-block;
+  background: var(--pink);
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.85rem 2rem;
+  border-radius: 999px;
+  outline: 2px dashed rgba(255,255,255,0.6);
+  outline-offset: -6px;
+  transition: box-shadow 0.15s ease;
+  margin-bottom: 1rem;
+}
+
+#exit-popup-cta:hover {
+  box-shadow: 0 6px 16px rgba(237, 21, 102, 0.4);
+}
+
+#exit-popup-cta:active {
+  background: #fff;
+  color: var(--pink);
+  outline-color: rgba(237,21,102,0.5);
+}
+
+#exit-popup-dismiss {
+  display: block;
+  background: none;
+  border: none;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.8rem;
+  color: #999;
+  cursor: pointer;
+  margin: 0 auto;
+  padding: 0.25rem;
+  text-decoration: underline;
+}
+
+#exit-popup-dismiss:hover {
+  color: var(--navy);
+}

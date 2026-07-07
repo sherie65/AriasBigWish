@@ -11,6 +11,7 @@
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Pacifico&display=swap"></noscript>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/exit-intent.css">
 </head>
 <body>
 
@@ -26,6 +27,7 @@
       <li><a href="index.html" class="active">Home</a></li>
       <li><a href="shop.html">Shop</a></li>
       <li><a href="https://square.link/u/vRmiWOAO">Donate</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="quiz.html" class="nav-cta">Find Your Adventure</a></li>
     </ul>
@@ -100,12 +102,38 @@
     <a href="quiz.html" class="btn btn-primary">Find My Adventure Match &rarr;</a>
   </section>
 
+  <!-- ============ REVIEWS TEASER ============ -->
+  <section class="reviews-teaser">
+    <h2 class="script center">What Readers Are Saying</h2>
+    <div class="reviews-teaser-grid">
+      <div class="teaser-card">
+        <div class="review-stars" aria-label="5 stars">★★★★★</div>
+        <blockquote class="review-quote">"[Replace with review quote #1]"</blockquote>
+        <p class="review-name">— [Name], age [X]</p>
+      </div>
+      <div class="teaser-card">
+        <div class="review-stars" aria-label="5 stars">★★★★★</div>
+        <blockquote class="review-quote">"[Replace with review quote #2]"</blockquote>
+        <p class="review-name">— [Name], age [X]</p>
+      </div>
+      <div class="teaser-card">
+        <div class="review-stars" aria-label="5 stars">★★★★★</div>
+        <blockquote class="review-quote">"[Replace with review quote #3]"</blockquote>
+        <p class="review-name">— [Name], age [X]</p>
+      </div>
+    </div>
+    <div class="center" style="margin-top:2rem;">
+      <a href="reviews.html" class="btn btn-primary">Read All Reviews</a>
+    </div>
+  </section>
+
   <!-- ============ FOOTER ============ -->
   <footer class="site-footer">
     <p>&copy; 2026 Sherene Rance &middot; The Adventures of Mermaid Aria</p>
   </footer>
 
   <script src="js/nav.js"></script>
+  <script src="js/exit-intent.js"></script>
   <script>
     function updateBundle(select) {
       var opt = select.options[select.selectedIndex];
